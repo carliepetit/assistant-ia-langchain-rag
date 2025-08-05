@@ -79,6 +79,42 @@ Outils :
 
 ---
 
+## 📁 Arborescence du projet
+
+```
+assistant-ia-langchain-rag/
+├── README.md                   ← 📄 Présentation du projet
+├── requirements.txt            ← 📦 Dépendances Python
+├── exemple.env                 ← 🔐 Exemple de variables d’environnement (.env)
+├── .gitignore                  ← 🚫 Fichiers à ignorer par Git
+├── Dockerfile                  ← 🐳 Image Docker de l’app
+├── docker-compose.yml          ← ⚙️ Orchestration du conteneur + services
+├── app/
+│   ├── app.py                  ← 🎛 Interface utilisateur (Streamlit)
+│   ├── rag_pipeline.py         ← 🔁 Chaîne RAG : retrieval + génération
+│   ├── prompts.py              ← 🧠 Prompt engineering
+│   └── session_utils.py        ← 💬 Gestion de session et historique
+├── data/
+│   ├── raw/                    ← 🌐 Données brutes (scrap, PDF, HTML…)
+│   ├── cleaned/                ← 🧹 Textes nettoyés / markdownifiés
+│   └── embeddings/             ← 📦 Embeddings vectorisés
+├── crawler/
+│   └── crawler.py              ← 🕷 Scraping automatisé du site GPSEA
+├── scripts/
+│   ├── cleaner.py              ← 🧼 Nettoyage HTML → Markdown
+│   └── chunker.py              ← ✂️ Chunking logique des textes
+├── models/
+│   └── embedding_model.py      ← 🔠 Encodage de texte (MiniLM, etc.)
+├── config/
+│   └── settings.yaml           ← ⚙️ Paramètres du projet (chunk size, API, etc.)
+├── notebooks/
+│   └── 01_exploration.ipynb    ← 📓 Analyse exploratoire / tests embeddings
+├── tests/
+│   └── test_pipeline.py        ← ✅ Tests unitaires de la pipeline
+```
+
+---
+
 ## 📐 Schéma d’architecture
 
 ```
@@ -125,8 +161,9 @@ Outils :
 
 ## 👩‍💻 Auteur
 
-Projet réalisé dans le cadre du Master 2 MASERATI – UPEC  
-👤 **Carlie Valdayard PETIT**  et **Jassen EUGENE**
+Projet réalisé dans le cadre du Master 2 MASERATI – UPEC en collaboration avec Jassen Eugène, sous la supervision de Mr MONCIF et Mr VIALFONT
+
+👤 **Carlie Valdayard PETIT**  
 📍 En partenariat avec **GPSEA**  
 📅 Année universitaire : 2024 – 2025
 
